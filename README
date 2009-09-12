@@ -1,0 +1,58 @@
+[What's this?]
+
+This is a javascript that semi-automatically removes duplicated
+listened tracks (scrobbles) on the Last.fm web site. The aim of
+this script is to address the defect that the Last.fm client on
+Mac OS X sometimes accidentally sends scrobbles that were already
+sent in the past for some reasons.
+
+[Requirement]
+
+- Firefox
+  http://www.mozilla.com/firefox/
+
+- Greasemonkey addon of Firefox
+  https://addons.mozilla.org/firefox/addon/748
+
+[Installation]
+
+1. Install Firefox and Greasemonkey and setup them. (You may need
+   just installing them.)
+
+2. Click the below link, and then you see the popup for installation.
+   http://github.com/peo3/lastfm-rm-duptracks/blob/master/lastfm_remove_duplicated.user.js
+   Click "install".
+
+[How to use]
+
+1. Login to the Last.fm and go the 'Recently Listened Tracks' page,
+   i.g., http://www.last.fm/user/<your_id>/tracks .
+
+2. If the page includes duplicated tracks, then starts to remove them.
+   Once any duplicated tracks have removed and all duplicated tracks
+   run out, the script reloads the page to load older tracks. Therefore,
+   while duplicated tracks are loaded by reloading the page, the script
+   automatically removes them until the page includes no duplicated
+   tracks.
+
+3. Otherwise, it shows a popup, 'No duplicated track found' and does
+   nothing. You want to remove older tracks, you need to jump to the
+   next page by yourself. This is the reason that the script is NOT
+   fully automated.
+
+[Important Notice]
+
+This script identifies duplicated tracks as whether a listened date is
+identical or not. Sadly, the Last.fm client normally sends tracks
+that have an identical date. This seems due to the limitation of iPod
+devices that store a track that is listened multiple times with only
+last listened date and number of times.
+
+Therefore, DON'T use this script for such normal situation and use it
+ONLY when you clearly know that duplicated tracks are sent for some
+reason. I strongly recommend that turns this script off by default
+to avoid removing innocent tracks by mistake.
+
+[Author]
+
+  peo3 http://www.last.fm/user/peo3
